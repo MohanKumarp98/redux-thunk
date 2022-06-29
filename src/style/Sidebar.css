@@ -1,0 +1,17 @@
+.collection h4{
+    margin: 20px 0px;
+}
+
+.collection{
+    margin-left: 15px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+.sidebar{
+    background-color: azure;
+}
+
+img{
+    width: 100%;
+}

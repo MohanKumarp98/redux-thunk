@@ -1,0 +1,21 @@
+
+
+.navcontent{
+    display: flex;
+}
+
+.navbar-nav .nav-item{
+    margin-left: 30px;
+}
+
+.navbar-nav{
+    margin-right: 10px;
+}
+
+.iconi{
+    display: flex;
+}
+
+.iconi .nav-link{
+    margin-left: 10px;
+}
