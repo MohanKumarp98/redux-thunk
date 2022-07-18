@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import brandimg from "../assets/navimg/jock logo.jpg";
 import "../style/Brand.css";
 import Data from "./Data";
@@ -8,15 +8,19 @@ import BreadCurm from "./BreadCurm";
 import Chip from "./Chip";
 import { Stack } from "@mui/material";
 import { clearCollectionfilter } from "../redux/actions/productActions";
+import { fetchProducts, todoProducts } from "../services/apicalls/todoproduct";
 
 const Brands = () => {
   const products = useSelector((state) => state.allProducts.products);
   const filteredDatas = useSelector((state) => state.allProducts.filteredData);
   const collection = useSelector((state) => state.allProducts.collectionFilter);
-  // console.log(products);
-  // console.log(collection);
-
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts("/users"))
+    dispatch(todoProducts("/todos"))
+  }, [])
+  
 
   const clearCollectionFilter = () => {
     dispatch(clearCollectionfilter());
